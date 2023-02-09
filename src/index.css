@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "SBAB-Bold";
+  src: local("SBAB-Bold"),
+    url("./assets/fonts/SBAB-Bold.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "SBAB-Display";
+  src: local("SBAB-Display"),
+    url("./assets/fonts/SBAB-Display.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "SBAB-Italic";
+  src: local("SBAB-Italic"),
+    url("./assets/fonts/SBAB-Italic.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "SBAB-Regular";
+  src: local("SBAB-Regular"),
+    url("./assets/fonts/SBAB-Regular.woff") format("truetype");
+}
