@@ -59,7 +59,7 @@ const InterestRateCalculator = () => {
                 <label>
                     Önskat lånebelopp:
                     <input 
-                        type="text"
+                        type="number"
                         value={loanInput}
                         onChange={event => handleOnChange(event.target.value)}
                         onClick={handleOnClick}
