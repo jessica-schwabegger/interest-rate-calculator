@@ -1,0 +1,66 @@
+.interest-rate-calculator-wrapper {
+    margin: 0 1rem;
+
+    h4 {
+        border-bottom: 0.5px solid lightgrey;
+        padding-bottom: 1rem;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+
+        input, select {
+            padding: 0.5rem;
+            border: 0.5px solid grey;
+            margin-top: 3px;
+            font-size: 1rem;
+        }
+    }
+
+    h1, h4, p, input, label {
+        font-family: "SBAB-Regular";
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .percentage-img {
+        display: none;
+    }
+
+}
+
+//desktop
+@media only screen and (min-width: 992px) {
+    .interest-rate-calculator-wrapper {
+        margin: auto;
+        width: 50%;
+
+        .percentage-img {
+            display: block;
+        }
+
+        .interest-rate-calculator-upper-section {
+            display: flex; 
+
+            .upper-section-text-wrapper {
+                width: 70%;
+            }
+
+            img {
+                margin-left: auto;
+            }
+        }
+
+        label {
+            width: 50%;
+        }
+    }
+}

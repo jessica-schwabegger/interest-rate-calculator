@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "outDir": "dist",
+      "rootDir": "src",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "allowJs": true,
+      "moduleResolution": "node",
+      "module": "commonJS",
+      "lib": ["es6", "dom"],
+      "target": "ES5",
+      "jsx": "react",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "baseUrl": "src"
+    },
+    "exclude": ["node_modules", "dist"]
+}
