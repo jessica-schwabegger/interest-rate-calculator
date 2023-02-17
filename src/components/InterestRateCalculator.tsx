@@ -17,6 +17,7 @@ const InterestRateCalculator = () => {
     const [loanInput, setLoanInput] = useState<string>("");
     const [mortgageData, setMortgageData] = useState<IMortgageData>();
     const [selectedMortgageRate, setSelectedMortgageRate] = useState<string>("");
+    const [hasChanged, setHasChanged] = useState(false);
 
     useEffect(() => {
         const getData = async () => {
@@ -32,6 +33,8 @@ const InterestRateCalculator = () => {
 
     const handleSelect = (value: string) => {
         setSelectedMortgageRate(value);
+        //First option should now be disabled, "Välj i listan"
+        setHasChanged(true);
     };
 
     return (
@@ -62,7 +65,7 @@ const InterestRateCalculator = () => {
                 <label>
                     Välj bindningstid
                     <select onChange={event => handleSelect(event.target.value)}>
-                        <option>Välj i listan</option>
+                        <option disabled={hasChanged}>Välj i listan</option>
                         {mortgageData && mortgageData.mortgage_rates.map((item, index) => (
                             <option key={index}>
                                 {item.binding_period_in_months} mån - {item.mortgage_rate}%

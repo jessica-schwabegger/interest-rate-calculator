@@ -13,7 +13,7 @@ const InterestRateResult = ({ loanInput, selectedMortgageRate }: IProps) => {
     const [calculatedInterestRatePerMonth, setCalculatedInterestRatePerMonth] = useState<number>(0);
 
     useEffect(() => {
-        if(selectedMortgageRate && selectedMortgageRate !== "Välj i listan") {
+        if(selectedMortgageRate) {
             //split string at - , and save item from index 1
             const splitMortgageRate = selectedMortgageRate.split("-")[1];
             setInterestRateToDisplay(splitMortgageRate);
