@@ -14,7 +14,7 @@ interface IMortgageData {
 };
 
 const InterestRateCalculator = () => {
-    const [loanInput, setLoanInput] = useState<string>("0");
+    const [loanInput, setLoanInput] = useState<string>("");
     const [mortgageData, setMortgageData] = useState<IMortgageData>();
     const [selectedMortgageRate, setSelectedMortgageRate] = useState<string>("");
 
@@ -33,12 +33,6 @@ const InterestRateCalculator = () => {
     const handleSelect = (value: string) => {
         setSelectedMortgageRate(value);
     };
-
-    const handleOnClick = () => {
-        if (loanInput === "0") {
-            setLoanInput("");
-        }
-    }
 
     return (
         <div className="interest-rate-calculator-wrapper">
@@ -62,7 +56,7 @@ const InterestRateCalculator = () => {
                         type="number"
                         value={loanInput}
                         onChange={event => handleOnChange(event.target.value)}
-                        onClick={handleOnClick}
+                        placeholder="0"
                     />
                 </label>
                 <label>
